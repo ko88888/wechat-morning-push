@@ -2,19 +2,22 @@ name: WeChat Morning Push
 
 on:
   schedule:
+    # 每天早上7点（北京时间）= UTC 23:00（前一天）
     - cron: '0 23 * * *'
+  # 允许手动触发
   workflow_dispatch:
 
 jobs:
   push:
     runs-on: ubuntu-latest
+    
     steps:
     - name: Clean workspace
-      run: rm -rf *  # 添加这行：清理工作区
+      run: rm -rf *
     
     - uses: actions/checkout@v4
       with:
-        fetch-depth: 0  # 添加这行：获取完整历史
+        fetch-depth: 0
     
     - name: Set up Python
       uses: actions/setup-python@v5
@@ -37,6 +40,6 @@ jobs:
         NAME_2: ${{ secrets.NAME_2 }}
         NEXT_MEETING_DATE: ${{ secrets.NEXT_MEETING_DATE }}
       run: |
-        echo "=== 验证代码版本 ==="  # 添加调试
-        head -5 main.py             # 显示代码前5行
+        echo "=== 验证代码 ==="
+        head -10 main.py
         python main.py
