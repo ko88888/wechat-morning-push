@@ -41,5 +41,5 @@ jobs:
         NEXT_MEETING_DATE: ${{ secrets.NEXT_MEETING_DATE }}
       run: |
         echo "=== 验证代码 ==="
-        head -10 main.py
+        head -10 love.py
         python love.py
