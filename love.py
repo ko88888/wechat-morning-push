@@ -72,7 +72,7 @@ def get_words():
     return quotes[datetime.date.today().day % len(quotes)]
 
 def main():
-    print("=== 早安推送 ===")
+    print("=== 开始早安推送 ===")
     token = get_access_token()
     if not token:
         print("❌ 获取token失败")
