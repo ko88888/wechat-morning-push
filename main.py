@@ -11,15 +11,12 @@ TEMPLATE_ID = os.environ.get("TEMPLATE_ID")
 OPENWEATHER_KEY = os.environ.get("OPENWEATHER_KEY", "")
 NEXT_MEETING_DATE = os.environ.get("NEXT_MEETING_DATE", "2026-04-04")
 
-# 删除 LOCATION，改用城市名
 NAME_1 = os.environ.get("NAME_1", "美孚")
 NAME_2 = os.environ.get("NAME_2", "巢鸭")
 
-# 城市名配置（精确地点 + 备用）
 CITY_1_PRECISE = "Sham Shui Po,Hong Kong"  # 深水埗
 CITY_1_FALLBACK = "Hong Kong"               # 备用
-
-CITY_2_PRECISE = "Nishisugamo,Tokyo"        # 西巢鸭
+CITY_2_PRECISE = "Sugamo,Tokyo"        # 巢鸭
 CITY_2_FALLBACK = "Tokyo"                    # 备用
 
 # ==================== 函数 ====================
