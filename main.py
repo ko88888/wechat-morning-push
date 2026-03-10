@@ -3,7 +3,6 @@ import json
 import datetime
 import os
 
-# ==================== 配置 ====================
 APP_ID = os.environ.get("APP_ID")
 APP_SECRET = os.environ.get("APP_SECRET")
 USER_ID = os.environ.get("USER_ID")
